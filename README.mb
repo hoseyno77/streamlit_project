@@ -1,0 +1,95 @@
+Database with Python and SQLite
+
+📌 Introduction
+
+A database is an organized collection of data that allows users to store, manage, retrieve, and update information efficiently.
+
+SQLite is a lightweight database management system that stores data in a single file. Python provides built-in support for SQLite through the sqlite3 module.
+
+🎯 Project Objectives
+
+Learn the basics of databases.
+
+Connect Python to a database.
+
+Create and manage database tables.
+
+Insert, retrieve, update, and delete data.
+
+Understand CRUD operations.
+
+🛠️ Technologies Used
+
+Python: Programming language.
+
+SQLite: Database management system.
+
+sqlite3: Python module for working with SQLite databases.
+
+✨ Features
+
+Create a database.
+
+Create tables.
+
+Insert new records.
+
+Retrieve and display data.
+
+Update existing records.
+
+Delete records.
+
+📚 CRUD Operations
+
+CRUD represents the four basic operations used to manage data in a database.
+
+OperationDescriptionSQL CommandCreateInsert new dataINSERTReadRetrieve dataSELECTUpdateModify existing dataUPDATEDeleteRemove dataDELETE 
+
+💻 Example
+
+The following example demonstrates how to create a database, create a table, insert data, and retrieve records using Python.
+
+import sqlite3 # Connect to the database connection = sqlite3.connect("database.db") # Create a cursor cursor = connection.cursor() # Create a table cursor.execute(""" CREATE TABLE IF NOT EXISTS users ( id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER ) """) # Insert data cursor.execute( "INSERT INTO users (name, age) VALUES (?, ?)", ("Ali", 25) ) # Retrieve data cursor.execute("SELECT * FROM users") # Display records users = cursor.fetchall() print(users) # Save changes connection.commit() # Close the connection connection.close() 
+
+🚀 How to Run
+
+Install Python on your computer.
+
+Create a Python file named main.py.
+
+Copy the example code into the file.
+
+Run the following command:
+
+python main.py 
+
+SQLite is included with Python, so you do not need to install a separate database package.
+
+📖 Important Concepts
+
+Database: A collection of organized data.
+
+Table: A structure used to store data in rows and columns.
+
+Row: A single record in a table.
+
+Column: A specific field in a table.
+
+Primary Key: A column that uniquely identifies each record.
+
+SQL: A language used to communicate with relational databases.
+
+Cursor: An object used to execute SQL statements.
+
+🔗 Useful Resources
+
+Python sqlite3 Documentation
+
+SQLite Official Website
+
+SQL Tutorial
+
+📝 Conclusion
+
+Learning databases is an important step in Python development. SQLite provides a simple way to store and manage data, while Python makes it easy to perform database operations programmatically.
